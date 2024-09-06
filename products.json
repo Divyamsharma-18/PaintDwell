@@ -1,0 +1,363 @@
+[
+    {
+      "id": "redForest",
+      "name": "Red Forest",
+      "price": "5600",
+      "oldPrice": "8200",
+      "image": "assets/new arrivals/img1.jpg",
+      "specifications": {
+        "Product Code": "PRD0067",
+        "Size(s)": "36x36 inches",
+        "Medium": "Oil Colour",
+        "Surface": "Canvas",
+        "Delivery": "10-14 days",
+        "COD": "Not available"
+      }
+    },
+    {
+      "id": "blueForest",
+      "name": "Blue Forest",
+      "price": "5200",
+      "oldPrice": "6200",
+      "image": "assets/new arrivals/img2.jpg",
+      "specifications": {
+        "Product Code": "PRD0078",
+        "Size(s)": "36x36 inches",
+        "Medium": "Oil Colour",
+        "Surface": "Canvas",
+        "Delivery": "10-14 days",
+        "COD": "Not available"
+      }
+    },
+    {
+      "id": "curvePatterns",
+      "name": "Curved",
+      "price": "4000",
+      "oldPrice": "8000",
+      "image": "assets/new arrivals/img3.jpg",
+      "specifications": {
+        "Product Code": "PRD0079",
+        "Size(s)": "36x36 inches",
+        "Medium": "Acrylic Colour",
+        "Surface": "Canvas",
+        "Delivery": "10-14 days",
+        "COD": "Not available"
+      }
+    },
+    {
+      "id": "radhaKrishna",
+      "name": "Rasleela",
+      "price": "1200",
+      "oldPrice": "1800",
+      "image": "assets/new arrivals/img4.jpg",
+      "specifications": {
+        "Product Code": "PRD0080",
+        "Size(s)": "24x24 inches",
+        "Medium": "Water Colour",
+        "Surface": "Paper",
+        "Delivery": "7-10 days",
+        "COD": "Available"
+      }
+    },
+    {
+        "id": "birdsAbstract",
+        "name": "Birds",
+        "price": "4000",
+        "oldPrice": "6000",
+        "image": "assets/trending/img1.jpg",
+        "specifications": {
+          "Product Code": "PRD0080",
+          "Size(s)": "36x36 inches",
+          "Medium": "Oil Colour",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "greenForestPrint",
+        "name": "Greenery",
+        "price": "3200",
+        "oldPrice": "4200",
+        "image": "assets/trending/img2.jpg",
+        "specifications": {
+          "Product Code": "PRD0081",
+          "Size(s)": "36x36 inches",
+          "Medium": "Oil Colour",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "motivationalPosterSet",
+        "name": "Poster Set",
+        "price": "2000",
+        "oldPrice": "3000",
+        "image": "assets/trending/img3.jpg",
+        "specifications": {
+          "Product Code": "PRD0082",
+          "Size(s)": "24x36 inches",
+          "Medium": "Print",
+          "Surface": "Paper",
+          "Delivery": "7-10 days",
+          "COD": "Available"
+        }
+    },
+    {
+        "id": "terracottaFloralPlateArt",
+        "name": "Terracotta",
+        "price": "1300",
+        "oldPrice": "2800",
+        "image": "assets/trending/img4.jpg",
+        "specifications": {
+          "Product Code": "PRD0083",
+          "Size(s)": "12 inches",
+          "Medium": "Terracotta",
+          "Surface": "Handcrafted Plate",
+          "Delivery": "7-10 days",
+          "COD": "Available"
+        }
+    },
+    {
+        "id": "threePiecesRedFlowers",
+        "name": "Red Flowers",
+        "price": "4400",
+        "oldPrice": "5000",
+        "image": "assets/handmade/img1.jpg",
+        "specifications": {
+          "Product Code": "PRD0084",
+          "Size(s)": "12x12 inches each",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "beautifulPeacock",
+        "name": "Peacock",
+        "price": "1200",
+        "oldPrice": "2200",
+        "image": "assets/handmade/img2.jpg",
+        "specifications": {
+          "Product Code": "PRD0085",
+          "Size(s)": "24x36 inches",
+          "Medium": "Watercolor",
+          "Surface": "Paper",
+          "Delivery": "10-14 days",
+          "COD": "Available"
+        }
+    },
+    {
+        "id": "bloomingWorld",
+        "name": "Bloom",
+        "price": "1200",
+        "oldPrice": "3500",
+        "image": "assets/handmade/img3.jpg",
+        "specifications": {
+          "Product Code": "PRD0086",
+          "Size(s)": "30x30 inches",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "lotusInWater",
+        "name": "Lotus",
+        "price": "1900",
+        "oldPrice": "3200",
+        "image": "assets/handmade/img4.jpg",
+        "specifications": {
+          "Product Code": "PRD0087",
+          "Size(s)": "24x24 inches",
+          "Medium": "Watercolor",
+          "Surface": "Paper",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "whiteBlueFlower",
+        "name": "WhiteFlower",
+        "price": "1200",
+        "oldPrice": "3000",
+        "image": "assets/handmade/img5.jpg",
+        "specifications": {
+          "Product Code": "PRD0088",
+          "Size(s)": "20x20 inches",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Available"
+        }
+    },
+    {
+        "id": "threePiecesWhiteFlowers",
+        "name": "Flowers Set",
+        "price": "3200",
+        "oldPrice": "4200",
+        "image": "assets/handmade/img6.jpg",
+        "specifications": {
+          "Product Code": "PRD0089",
+          "Size(s)": "30x30 inches",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "krishnaRasleelaArtwork",
+        "name": "Krishna",
+        "price": "2000",
+        "oldPrice": "3000",
+        "image": "assets/handmade/img7.jpg",
+        "specifications": {
+          "Product Code": "PRD0090",
+          "Size(s)": "24x36 inches",
+          "Medium": "Oil Colour",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "blueFlower",
+        "name": "BlueFlower",
+        "price": "1300",
+        "oldPrice": "2800",
+        "image": "assets/handmade/img8.jpg",
+        "specifications": {
+          "Product Code": "PRD0091",
+          "Size(s)": "20x20 inches",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Available"
+        }
+    },
+    {
+        "id": "loveInSpace",
+        "name": "Space Love",
+        "price": "4400",
+        "oldPrice": "5000",
+        "image": "assets/framed/img1.jpg",
+        "specifications": {
+          "Product Code": "PRD0092",
+          "Size(s)": "30x30 inches",
+          "Medium": "Oil Colour",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Available"
+        }
+    },
+    {
+        "id": "goodVibesOnly",
+        "name": "Good Vibes",
+        "price": "1200",
+        "oldPrice": "2200",
+        "image": "assets/framed/img2.jpg",
+        "specifications": {
+          "Product Code": "PRD0093",
+          "Size(s)": "24x24 inches",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "7-10 days",
+          "COD": "Available"
+        }
+    },
+    {
+        "id": "solitude",
+        "name": "Solitude",
+        "price": "1200",
+        "oldPrice": "3500",
+        "image": "assets/framed/img3.jpg",
+        "specifications": {
+          "Product Code": "PRD0094",
+          "Size(s)": "30x30 inches",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "7-10 days",
+          "COD": "Available"
+        }
+    },
+    {
+        "id": "oneCupChai",
+        "name": "Chai!",
+        "price": "1900",
+        "oldPrice": "3200",
+        "image": "assets/framed/img4.jpg",
+        "specifications": {
+          "Product Code": "PRD0095",
+          "Size(s)": "24x24 inches",
+          "Medium": "Watercolor",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "colorfulTreeBranches",
+        "name": "Branches",
+        "price": "1200",
+        "oldPrice": "3000",
+        "image": "assets/framed/img5.jpg",
+        "specifications": {
+          "Product Code": "PRD0096",
+          "Size(s)": "30x30 inches",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "musicForAll",
+        "name": "Music",
+        "price": "3200",
+        "oldPrice": "4200",
+        "image": "assets/framed/img6.jpg",
+        "specifications": {
+          "Product Code": "PRD0097",
+          "Size(s)": "36x36 inches",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "beautifulPeacock",
+        "name": "Peacock",
+        "price": "2000",
+        "oldPrice": "3000",
+        "image": "assets/framed/img7.jpg",
+        "specifications": {
+          "Product Code": "PRD0098",
+          "Size(s)": "36x36 inches",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    },
+    {
+        "id": "alwaysBelieveInYourself",
+        "name": "Believe!",
+        "price": "1300",
+        "oldPrice": "2800",
+        "image": "assets/framed/img8.jpg",
+        "specifications": {
+          "Product Code": "PRD0099",
+          "Size(s)": "36x36 inches",
+          "Medium": "Acrylic",
+          "Surface": "Canvas",
+          "Delivery": "10-14 days",
+          "COD": "Not available"
+        }
+    }
+]
+  

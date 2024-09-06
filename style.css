@@ -1,0 +1,178 @@
+@media (max-width:780px) {
+    .email {
+        display: none;
+    }
+}
+
+#scroll-up {
+    position: fixed;
+    bottom: 90px;
+    right: 35px;
+}
+
+
+.mainBodyCont{
+    
+}
+
+
+.dropdownMobile-content {
+    display: none; /* Hide dropdown content initially */
+    position: absolute;
+    top: 100%; /* Position below the button */
+    left: 0;
+    right: 0;
+    z-index: 10; /* Ensure it appears above other content */
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdownMobile-content.show {
+    display: block; /* Show dropdown content */
+}
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Hide dropdown menu by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Show dropdown menu on hover */
+.relative.group:hover .dropdown-menu {
+    display: block;
+}
+
+/* Tailwind customizations for dropdown button (if needed) */
+.dropdown-button {
+    @apply inline-flex items-center gap-2 px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5;
+}
+
+/* Mobile menu styles */
+#mobile-menu {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 64px;
+    /* Adjust based on navbar height */
+    width: 100%;
+    z-index: 40;
+    /* Ensure it appears above other content */
+}
+
+/* Hero Section Image Slider */
+#slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+#prev,
+#next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 20;
+}
+
+
+@media (max-width: 424px) {
+    .dash {
+        display: none;
+    }
+    .DOTD img{
+        height: 200px;
+    }
+    .flowerImg{
+        width: 90%;
+    }
+}
+
+
+.line-through {
+    color: gray;
+    margin-top: 3px;
+}
+
+footer,
+.popular{
+    margin: 64px;
+}
+
+
+@media (max-width: 700px) {
+    .artByGrp{
+        margin-top: 100px;
+    }
+
+    .popular,
+    footer{
+        margin: 20px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+    .prodPageImg {
+      margin-left: 3.5rem; /* Adjust to ml-4 equivalent */
+    }
+
+  }
+
+
+
+@media screen and (max-width: 600px) {
+   .searchBar{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   }
+}
+
+@media screen and (max-width: 500px) {
+    .cartItem{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .remove-item{
+        margin-top: -14px;
+    }
+}
+
+.slider-container{
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+@media (min-width:640px) {
+    .slider-container img{
+        width: 100%;
+        max-width: none;
+    }
+}

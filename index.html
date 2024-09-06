@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/aa4c08b0fe.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="Favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>PaintDwell!</title>
+</head>
+
+<body class="m-0 p-0">
+
+
+      <!-- Notification Pop-up -->
+  <!-- Notification Pop-up -->
+  <div id="notification-popup" class="absolute top-0 left-1/2 transform -translate-x-1/2 w-96 bg-white text-center p-4 shadow-md hidden z-50">
+    <p class="text-lg pt-4 text-gray-800 font-bold mb-2">Get notifications</p>
+    <p class="text-lg text-gray-700 mb-4">Want to receive notifications about offers, discounts & more?</p>
+    <div class="flex justify-center space-x-4">
+      <button id="no-btn" class=" text-gray-700 text-lg px-4 py-2 rounded">NO</button>
+      <button id="yes-btn" class="bg-teal-500 text-lg text-white px-4 py-2 rounded hover:bg-teal-600">YES</button>
+    </div>
+  </div>
+
+
+    <!-- TOP BAR -->
+
+    <div class="topBar fixed z-50 top-0 w-full bg-white flex justify-between  ">
+
+        <div class="tocontact flex gap-4 ml-2">
+            <div class="number cursor-pointer text-gray-700  hover:text-teal-500">
+                <a href="https://api.whatsapp.com/send/?phone=%2B919876543210&text&type=phone_number&app_absent=0"
+                    target="_blank">
+                    +91 98765 43210
+                </a>
+            </div>
+            <div class="email ml-2 text-gray-700 hover:text-teal-500 cursor-pointer">
+                <a href="mailto:info@paintacle.com">
+                    paintdwell@gmail.com
+                </a>
+            </div>
+        </div>
+        <div class="login cursor-pointer text-gray-700 flex gap-5  mr-4">
+            <div class="hover:text-teal-500">
+                <button id="wishlistPage" class="wishlistPage" >
+                    <i class="fa-solid fa-heart"></i> Wishlist
+                </button>
+            </div>
+            <div class="hover:text-teal-500">
+                <a href="#" class="replaceContentButton">
+                    <i class="fa-solid fa-user"></i>
+                    Login
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nav Bar -->
+
+    <div class="pt-4 w-full bg-white fixed z-40">
+        <!-- logo and Nav -->
+        <div class="logoAndNavBar">
+
+            <!-- Logo -->
+            <nav class="bg-white shadow-md flex">
+                <div class="max-w-7xl h-20 lg:ml-10 mx-auto px-4 sm:px-6 lg:px-8 ml-0">
+                    <div class="flex justify-between h-16">
+                        <div class="flex">
+                            <div class="flex-shrink-0 flex items-center">
+                                <a href="index.html" class="text-xl mt-4 font-bold text-gray-900">
+                                    <img src="Logo.png" width="200px" alt="Logo">
+                                </a>
+                            </div>
+
+                            <!-- Nav Bar -->
+
+                            <div class="hidden md:flex space-x-8 mt-7 ml-10">
+                                <div class="relative group">
+                                    <button
+                                        class="dropdown-button inline-flex gap-2 items-center px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                        Products
+                                        <i class="fa-solid mt-1 fa-angle-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu absolute hidden bg-white shadow-lg py-2 ">
+                                        <a href="#" id="handmadeSection"
+                                            class="handmadeSection block px-4 py-2 text-sm text-gray-700 w-40 hover:text-teal-500 hover:bg-gray-100">Handmade
+                                            painting</a>
+                                        <a href="#" id="posterSection"
+                                            class="posterSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">Poster</a>
+                                    </div>
+                                </div>
+
+                                <div class="relative group">
+                                    <button
+                                        class="dropdown-button inline-flex gap-2 items-center px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                        Spaces
+                                        <i class="fa-solid mt-1 fa-angle-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu absolute hidden bg-white shadow-lg py-2">
+                                        <a href="#" id="forBedroomSection"
+                                            class="forBedroomSection block px-4 py-2 text-sm text-gray-700 w-32 hover:text-teal-500 hover:bg-gray-100">For
+                                            Bedroom</a>
+                                        <a href="#" id="forGuestroomSection"
+                                            class="forGuestroomSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">For
+                                            Guestroom</a>
+                                        <a href="#" id="forLobbySection"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">For
+                                            Lobby</a>
+                                        <a href="#" id="forOfficeSection"
+                                            class="forOfficeSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">For
+                                            Office</a>
+                                        <a href="#" id="forStudioSection"
+                                            class="forStudioSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">For
+                                            Studio</a>
+                                    </div>
+                                </div>
+
+                                <div class="relative group">
+                                    <button
+                                        class="dropdown-button inline-flex gap-2 items-center px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                        Styles
+                                        <i class="fa-solid mt-1 fa-angle-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu absolute hidden bg-white shadow-lg py-2">
+                                        <a href="#" id="modernArtworksSection"
+                                            class="modernArtworksSection block px-4 py-2 text-sm text-gray-700 w-40 hover:text-teal-500 hover:bg-gray-100">Modern
+                                            Artworks</a>
+                                        <a href="#" id="abstractArtworksSection"
+                                            class="abstractArtworksSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">Abstract
+                                            Artworks</a>
+                                        <a href="#" id="contemporaryArtworksSection"
+                                            class="contemporaryArtworksSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">Contemporary
+                                            Artworks</a>
+                                        <a href="#" id="popArtworksSection"
+                                            class="popArtworksSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">POP
+                                            Artworks</a>
+                                    </div>
+                                </div>
+
+                                <div class="relative group">
+                                    <button
+                                        class="dropdown-button inline-flex gap-2 items-center px-1 pt-1 border-b-2 border-transparent text-md font-medium leading-5 text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                                        Subjects
+                                        <i class="fa-solid mt-1 fa-angle-down"></i>
+                                    </button>
+                                    <div class="dropdown-menu absolute hidden bg-white shadow-lg py-2">
+                                        <a href="#" id="krishnaArtworksSection"
+                                            class="krishnaArtworksSection block px-4 py-2 text-sm text-gray-700 w-40 hover:text-teal-500 hover:bg-gray-100">Krishna
+                                            Artworks</a>
+                                        <a href="#" id="natureArtworksSection"
+                                            class="natureArtworksSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">Nature
+                                            Artworks</a>
+                                        <a href="#" id="educationalArtworksSection"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">Educational
+                                            Artworks</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center md:hidden">
+                            <button id="menu-toggle" type="button"
+                                class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
+                                aria-expanded="false">
+                                <svg class="h-6 absolute right-4 mt-5 w-6" stroke="currentColor" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path id="menu-open-icon" class="inline-flex" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                                    <path id="menu-close-icon" class="hidden" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-8">
+                    <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col sm:px-3">
+
+
+                        <!-- Dropdown 1 -->
+                        <div class="relative inline-block text-left">
+                            <button
+                                class="dropdownMobile-button inline-flex justify-center w-full  shadow-sm px-4 py-2 text-sm font-medium text-gray-700 hover:text-teal-500 focus:outline-none">
+                                Products <span class="ml-2">▼</span>
+                            </button>
+                            <div
+                                class="dropdownMobile-content origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                                <div class="py-1">
+                                    <a href="#" id="handmadeSection"
+                                            class="handmadeSection block px-4 py-2 text-sm text-gray-700 w-40 hover:text-teal-500 hover:bg-gray-100">Handmade
+                                            painting</a>
+                                    <a href="#" id="posterSection"
+                                            class="posterSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">Poster</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown 2 -->
+                        <div class="relative inline-block text-left">
+                            <button
+                                class="dropdownMobile-button inline-flex justify-center w-full shadow-sm px-4 py-2 text-sm font-medium text-gray-700 hover:text-teal-500 focus:outline-none">
+                                Spaces <span class="ml-2">▼</span>
+                            </button>
+                            <div
+                                class="dropdownMobile-content origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                                <div class="py-1">
+                                    <a href="#" id="forBedroomSection"
+                                            class="forBedroomSection block px-4 py-2 text-sm text-gray-700 w-32 hover:text-teal-500 hover:bg-gray-100">For
+                                            Bedroom</a>
+                                        <a href="#" id="forGuestroomSection"
+                                            class="forGuestroomSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">For
+                                            Guestroom</a>
+                                        <a href="#" id="forLobbySection"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">For
+                                            Lobby</a>
+                                        <a href="#" id="forOfficeSection"
+                                            class="forOfficeSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">For
+                                            Office</a>
+                                        <a href="#" id="forStudioSection"
+                                            class="forStudioSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">For
+                                            Studio</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown 3 -->
+                        <div class="relative inline-block text-left">
+                            <button
+                                class="dropdownMobile-button inline-flex justify-center w-full  shadow-sm px-4 py-2 text-sm font-medium text-gray-700 hover:text-teal-500 focus:outline-none">
+                                Styles<span class="ml-2">▼</span>
+                            </button>
+                            <div
+                                class="dropdownMobile-content origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                                <div class="py-1">
+                                    <a href="#" id="modernArtworksSection"
+                                            class="modernArtworksSection block px-4 py-2 text-sm text-gray-700 w-40 hover:text-teal-500 hover:bg-gray-100">Modern
+                                            Artworks</a>
+                                        <a href="#" id="abstractArtworksSection"
+                                            class="abstractArtworksSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">Abstract
+                                            Artworks</a>
+                                        <a href="#" id="contemporaryArtworksSection"
+                                            class="contemporaryArtworksSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">Contemporary
+                                            Artworks</a>
+                                        <a href="#" id="popArtworksSection"
+                                            class="popArtworksSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">POP
+                                            Artworks</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dropdown 4 -->
+                        <div class="relative inline-block text-left">
+                            <button
+                                class="dropdownMobile-button inline-flex justify-center w-full  shadow-sm px-4 py-2 text-sm font-medium text-gray-700 hover:text-teal-500 focus:outline-none">
+                                Subjects<span class="ml-2">▼</span>
+                            </button>
+                            <div
+                                class="dropdownMobile-content origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                                <div class="py-1">
+                                    <a href="#" id="krishnaArtworksSection"
+                                            class="krishnaArtworksSection block px-4 py-2 text-sm text-gray-700 w-40 hover:text-teal-500 hover:bg-gray-100">Krishna
+                                            Artworks</a>
+                                        <a href="#" id="natureArtworksSection"
+                                            class="natureArtworksSection block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">Nature
+                                            Artworks</a>
+                                        <a href="#" id="educationalArtworksSection"
+                                            class="block px-4 py-2 text-sm text-gray-700 hover:text-teal-500 hover:bg-gray-100">Educational
+                                            Artworks</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+                <!-- Cart and Search -->
+                <div class="cartAndSearch mr-8 mt-5 flex">
+                    <button id="cartPage" class="mr-2 hover:bg-teal-500 bg-slate-600 h-10 w-10 rounded-full">
+                        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                    </button>
+                    <button id="searchPage" class="mr-2 hover:bg-teal-500 bg-slate-600 h-10 w-10 rounded-full">
+                        <i class="fa-solid fa-search" style="color: #ffffff;"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <!-- Space to cover -->
+    <div class="space h-24"></div>
+
+    <div id="contentContainer" class="container max-w-full">
+
+
+        <!-- Hero Section with Slider -->
+
+
+        <div class="relative w-full slider-container">
+            <!-- Slider -->
+            <div class="relative overflow-hidden w-full h-full flex">
+                <div class="flex transition-transform duration-500 ease-in-out w-full h-full" id="slider">
+                    <a class="w-full h-full object-cover flex-shrink-0" href="">
+                        <img src="assets/hero section/Painting 1.jpg" alt="Image 1">
+                    </a>
+
+                    <a class="w-full h-full object-cover flex-shrink-0" href="">
+                        <img src="assets/hero section/Painting 2.jpg" alt="Image 2">
+                    </a>
+
+                    <a class="w-full h-full object-cover flex-shrink-0" href="">
+                        <img src="assets/hero section/Painting 3.jpg" alt="Image 3">
+                    </a>
+
+                    <a class="w-full h-full object-cover flex-shrink-0" href="">
+                        <img src="assets/hero section/Painting 4.jpg" alt="Image4">
+                    </a>
+
+                </div>
+
+                <!-- Left Arrow -->
+                <button id="prev"
+                    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
+                    </svg>
+                </button>
+
+                <!-- Right Arrow -->
+                <button id="next"
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Popular Art Subject -->
+
+        <div id="popularArts" class="popularArts">
+
+            <div>
+                <div class="name gap-4 mt-14 flex justify-center">
+                    <div class="border-b-2 dash mb-4 w-14"></div>
+                    <h2 class="text-3xl font-medium text-center font-serif text-gray-800">Popular Art Subjects</h2>
+                    <div class="border-b-2 dash mb-4 w-14"></div>
+                </div>
+
+                <div class="cards flex flex-wrap gap-4 mt-14 justify-center">
+
+                    <div class="card bg-gray-100 h-32 w-40 rounded-xl text-center cursor-pointer">
+                        <i class="fa-solid fa-bed mt-11 fa-2xl"></i>
+                        <div class="mt-4">
+                            <a href="#" id="forBedroomSection" class="forBedroomSection font-serif cursor-pointer text-center mt-4 hover:text-teal-500">Art For Bedroom</a>
+                        </div>
+                    </div>
+
+                    <div class="card bg-gray-100 h-32 w-40 rounded-xl text-center cursor-pointer">
+                        <i class="fa-solid fa-laptop mt-11 fa-2xl"></i>
+                        <div class="mt-4">
+                            <a href="#" class="forOfficeSection font-serif cursor-pointer text-center mt-4 hover:text-teal-500">Art For Office</a>
+                        </div>
+                    </div>
+
+                    <div class="card bg-gray-100 h-32 w-40 rounded-xl text-center cursor-pointer">
+                        <i class="fa-solid fa-mountain-sun mt-11 fa-2xl"></i>
+                        <div class="mt-4">
+                            <a href="#" class="natureArtworksSection font-serif cursor-pointer text-center mt-4 hover:text-teal-500">Landscape</a>
+                        </div>
+                    </div>
+
+                    <div class="card bg-gray-100 h-32 w-40 rounded-xl text-center cursor-pointer">
+                        <i class="fa-brands mt-11 fa-canadian-maple-leaf fa-2xl"></i>
+                        <div class="mt-4">
+                            <a href="#" class="posterSection font-serif cursor-pointer text-center mt-4 hover:text-teal-500">Floral</a>
+                        </div>
+                    </div>
+
+                    <div class="card bg-gray-100 h-32 w-40 rounded-xl text-center cursor-pointer">
+                        <i class="fa-solid mt-11 fa-paintbrush fa-2xl"></i>
+                        <div class="mt-4">
+                            <h3 class="handmadeSection font-serif cursor-pointer text-center mt-4 hover:text-teal-500">Handmade</h3>
+                        </div>
+                    </div>
+
+                    <div class="card bg-gray-100 h-32 w-40 rounded-xl text-center cursor-pointer">
+                        <i class="fa-solid mt-11 fa-hands-praying fa-2xl"></i>
+                        <div class="mt-4">
+                            <a href="#" class="krishnaArtworksSection font-serif cursor-pointer text-center mt-4 hover:text-teal-500">Religious</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Deal of the day -->
+
+        <div class="DOTD flex justify-center gap-8 mt-20 flex-wrap">
+
+            <a href="#" class="handmadeSection">
+                <img src="assets/DOTD/Banner 1.png" class="h-72 cursor-pointer" alt="">
+            </a>
+
+            <a href="#" class="posterSection">
+                <img src="assets/DOTD/Banner 2.png" class="h-72 cursor-pointer" alt="">
+            </a>
+
+        </div>
+
+
+        <!-- New Arrivals -->
+
+        <div class="newArrivals">
+
+            <div class="name gap-4 mt-14 flex justify-center">
+                <div class="border-b-2 dash mb-4 w-14"></div>
+                <h2 class="text-3xl font-medium text-center font-serif text-gray-800">New Arrivals</h2>
+                <div class="border-b-2 dash mb-4 w-14"></div>
+            </div>
+
+            <div class="newCard flex flex-wrap gap-8 mt-16 justify-center ">
+
+                <div class="card cursor-pointer" data-product-id="redForest">
+                    <img src="assets/new arrivals/img1.jpg" width="260px" alt="">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Red Forest</h3>
+                    <div class="amount flex justify-center gap-2">
+                        <div class="price text-lg text-teal-500"> ₹ 5600 </div>
+                        <div class="price line-through text-gray-700"> ₹ 8200</div>
+                    </div>
+                </div>                
+
+
+                <div class="card cursor-pointer" data-product-id="blueForest">
+                    <img src="assets/new arrivals/img2.jpg" width="260px" alt="Blue Forest">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Blue Forest</h3>
+                    <div class="amount flex justify-center gap-2">
+                        <div class="price text-lg text-teal-500"> ₹ 5200 </div>
+                        <div class="price line-through text-gray-700"> ₹ 6200</div>
+                    </div>
+                </div>
+
+
+                <div class="card cursor-pointer" data-product-id="curvePatterns">
+                    <img src="assets/new arrivals/img3.jpg" width="260px" alt="Curve Patterns">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Curve Patterns</h3>
+                    <div class="amount flex justify-center gap-2">
+                        <div class="price text-lg text-teal-500"> ₹ 4000 </div>
+                        <div class="price line-through text-gray-700"> ₹ 8000</div>
+                    </div>
+                </div>
+
+
+                <div class="card cursor-pointer" data-product-id="radhaKrishna">
+                    <img src="assets/new arrivals/img4.jpg" width="260px" alt="Radha Krishna">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Radha Krishna</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1200 </div>
+                      <div class="price line-through text-gray-700"> ₹ 1800</div>
+                    </div>
+                  </div>                  
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Trending Artworks -->
+
+        <div class="trending">
+
+            <div class="name gap-4 mt-14 flex justify-center">
+                <div class="border-b-2 dash mb-4 w-14"></div>
+                <h2 class="text-3xl font-medium text-center font-serif text-gray-800">Trending Artworks</h2>
+                <div class="border-b-2 dash mb-4 w-14"></div>
+            </div>
+        </div>
+
+        <div class="newCard flex flex-wrap gap-8 mt-16 justify-center ">
+
+            <div class="card cursor-pointer" data-product-id="birdsAbstract">
+                <img src="assets/trending/img1.jpg" width="260px" alt="Birds Abstract Artwork">
+                <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Birds Abstract Artwork</h3>
+                <div class="amount flex justify-center gap-2">
+                  <div class="price text-lg text-teal-500"> ₹ 4000 </div>
+                  <div class="price line-through text-gray-700"> ₹ 6000</div>
+                </div>
+              </div>
+              
+
+
+              <div class="card cursor-pointer" data-product-id="greenForestPrint">
+                <img src="assets/trending/img2.jpg" width="260px" alt="Green Forest Print">
+                <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Green Forest Print</h3>
+                <div class="amount flex justify-center gap-2">
+                  <div class="price text-lg text-teal-500"> ₹ 3200 </div>
+                  <div class="price line-through text-gray-700"> ₹ 4200</div>
+                </div>
+              </div>
+              
+
+
+              <div class="card cursor-pointer" data-product-id="motivationalPosterSet">
+                <img src="assets/trending/img3.jpg" width="260px" alt="Motivational Poster Set">
+                <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Motivational Poster Set</h3>
+                <div class="amount flex justify-center gap-2">
+                  <div class="price text-lg text-teal-500"> ₹ 2000 </div>
+                  <div class="price line-through text-gray-700"> ₹ 3000</div>
+                </div>
+              </div>
+              
+
+
+              <div class="card cursor-pointer" data-product-id="terracottaFloralPlateArt">
+                <img src="assets/trending/img4.jpg" width="260px" alt="Terracotta Floral Plate Art">
+                <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Terracotta Floral Plate Art</h3>
+                <div class="amount flex justify-center gap-2">
+                  <div class="price text-lg text-teal-500"> ₹ 1300 </div>
+                  <div class="price line-through text-gray-700"> ₹ 2800</div>
+                </div>
+              </div>              
+
+        </div>
+
+
+
+        <!-- Discover Artwork -->
+
+        <div class="discover flex flex-col justify-center items-center">
+
+            <div class="name gap-4 mt-36 border-b-2 border-b-teal-500 flex w-[75%] justify-center">
+                <h2 class="text-3xl mb-10 font-medium text-center font-serif text-gray-800">Discover Artworks</h2>
+            </div>
+
+            <!-- Handmade Artworks -->
+
+            <div class="name gap-4 mt-14 flex justify-center">
+                <div class="border-b-2 dash mb-4 w-14"></div>
+                <h2 class="text-2xl font-medium text-center font-serif text-gray-800">Handmade Artworks</h2>
+                <div class="border-b-2 dash mb-4 w-14"></div>
+            </div>
+
+            <div class="newCard grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-16 ">
+
+                <div class="card cursor-pointer" data-product-id="threePiecesRedFlowers">
+                    <img src="assets/handmade/img1.jpg" width="260px" alt="Three Pieces Red Flowers">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Three Pieces Red Flowers</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 4400 </div>
+                      <div class="price line-through text-gray-700"> ₹ 5000</div>
+                    </div>
+                  </div>
+                  
+
+
+                  <div class="card cursor-pointer" data-product-id="beautifulPeacock">
+                    <img src="assets/handmade/img2.jpg" width="260px" alt="Beautiful Peacock">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Beautiful Peacock</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1200 </div>
+                      <div class="price line-through text-gray-700"> ₹ 2200</div>
+                    </div>
+                  </div>
+                  
+
+
+                  <div class="card cursor-pointer" data-product-id="bloomingWorld">
+                    <img src="assets/handmade/img3.jpg" width="260px" alt="Blooming World">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Blooming World</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1200 </div>
+                      <div class="price line-through text-gray-700"> ₹ 3500</div>
+                    </div>
+                  </div>
+                  
+
+
+                  <div class="card cursor-pointer" data-product-id="lotusInWater">
+                    <img src="assets/handmade/img4.jpg" width="260px" alt="Lotus In Water">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Lotus In Water</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1900 </div>
+                      <div class="price line-through text-gray-700"> ₹ 3200</div>
+                    </div>
+                  </div>
+                  
+
+
+
+                <div class="card cursor-pointer" data-product-id="whiteBlueFlower">
+                    <img src="assets/handmade/img5.jpg" width="260px" alt="White Blue Flower">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">White Blue Flower</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1200 </div>
+                      <div class="price line-through text-gray-700"> ₹ 3000</div>
+                    </div>
+                  </div>
+                  
+
+
+                  <div class="card cursor-pointer" data-product-id="threePiecesWhiteFlowers">
+                    <img src="assets/handmade/img6.jpg" width="260px" alt="Three Pieces White Flowers">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Three Pieces White Flowers</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 3200 </div>
+                      <div class="price line-through text-gray-700"> ₹ 4200</div>
+                    </div>
+                  </div>
+                  
+
+
+                  <div class="card cursor-pointer" data-product-id="krishnaRasleelaArtwork">
+                    <img src="assets/handmade/img7.jpg" width="260px" alt="Krishna Rasleela Artwork">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Krishna Rasleela Artwork</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 2000 </div>
+                      <div class="price line-through text-gray-700"> ₹ 3000</div>
+                    </div>
+                  </div>                  
+
+
+                  <div class="card cursor-pointer" data-product-id="blueFlower">
+                    <img src="assets/handmade/img8.jpg" width="260px" alt="Blue Flower">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Blue Flower</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1300 </div>
+                      <div class="price line-through mt-1 text-gray-700"> ₹ 2800</div>
+                    </div>
+                  </div>
+                  
+
+            </div>
+
+            <a href="#" class="handmadeSection">
+                <button class="font-bold mt-12 h-10 w-32 bg-teal-500 hover:bg-teal-700 text-white"> View All</button>
+            </a>
+
+
+            <!-- Framed Posters -->
+
+            <div class="name gap-4 mt-16 flex justify-center">
+                <div class="border-b-2 dash mb-4 w-14"></div>
+                <h2 class="text-2xl font-medium text-center font-serif text-gray-800">Framed Posters</h2>
+                <div class="border-b-2 dash mb-4 w-14"></div>
+            </div>
+
+            <div class="newCard grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 mt-16">
+
+                <div class="card cursor-pointer" data-product-id="loveInSpace">
+                    <img src="assets/framed/img1.jpg" width="260px" alt="Love In Space">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Love In Space</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 4400 </div>
+                      <div class="price line-through text-gray-700"> ₹ 5000</div>
+                    </div>
+                  </div>
+                  
+
+
+                  <div class="card cursor-pointer" data-product-id="goodVibesOnly">
+                    <img src="assets/framed/img2.jpg" width="260px" alt="Good Vibes Only">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Good Vibes Only</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1200 </div>
+                      <div class="price line-through text-gray-700"> ₹ 2200</div>
+                    </div>
+                  </div>
+                  
+
+
+                  <div class="card cursor-pointer" data-product-id="solitude">
+                    <img src="assets/framed/img3.jpg" width="260px" alt="Solitude">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Solitude</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1200 </div>
+                      <div class="price line-through text-gray-700"> ₹ 3500</div>
+                    </div>
+                  </div>
+                  
+
+
+                  <div class="card cursor-pointer" data-product-id="oneCupChai">
+                    <img src="assets/framed/img4.jpg" width="260px" alt="One Cup Chai Please!">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">One Cup Chai Please!</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1900 </div>
+                      <div class="price line-through text-gray-700"> ₹ 3200</div>
+                    </div>
+                  </div>
+                  
+
+
+
+                <div class="card cursor-pointer" data-product-id="colorfulTreeBranches">
+                    <img src="assets/framed/img5.jpg" width="260px" alt="Colorful Tree Branches">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Colorful Tree Branches</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1200 </div>
+                      <div class="price line-through text-gray-700"> ₹ 3000</div>
+                    </div>
+                  </div>                  
+
+
+                  <div class="card cursor-pointer" data-product-id="musicForAll">
+                    <img src="assets/framed/img6.jpg" width="260px" alt="Music For All">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Music For All</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 3200 </div>
+                      <div class="price line-through text-gray-700"> ₹ 4200</div>
+                    </div>
+                  </div>                  
+
+
+                  <div class="card cursor-pointer" data-product-id="beautifulPeacock">
+                    <img src="assets/framed/img7.jpg" width="260px" alt="Beautiful Peacock">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Beautiful Peacock</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 2000 </div>
+                      <div class="price line-through text-gray-700"> ₹ 3000</div>
+                    </div>
+                  </div>
+                  
+
+
+                  <div class="card cursor-pointer" data-product-id="alwaysBelieveInYourself">
+                    <img src="assets/framed/img8.jpg" width="260px" alt="Always Believe In Yourself">
+                    <h3 class="text-lg font-serif text-center mt-4 text-gray-800">Always Believe In Yourself</h3>
+                    <div class="amount flex justify-center gap-2">
+                      <div class="price text-lg text-teal-500"> ₹ 1300 </div>
+                      <div class="price line-through text-gray-700"> ₹ 2800</div>
+                    </div>
+                  </div>                  
+
+
+            </div>
+
+            <a class="mt-12 posterSection" href="#">
+                <button class="font-bold h-10 w-32 bg-teal-500 hover:bg-teal-700 text-white"> View All</button>
+            </a>
+
+        </div>
+
+
+        <!-- Flower Banner -->
+
+        <div class="flowerBanner flex justify-center gap-8 mt-20 flex-wrap">
+
+            <a href="#" class="handmadeSection">
+                <img src="assets/Floral artwork banner.jpg" class="flowerImg w-[100%]" alt="">
+            </a>
+
+        </div>
+
+
+        <!-- Art by Space -->
+
+        <div class="name artByGrp gap-4 mt-48 flex justify-center">
+            <div class="border-b-2 dash mb-4 w-14"></div>
+            <h2 class="text-2xl font-medium text-center font-serif text-gray-800">Art by Space</h2>
+            <div class="border-b-2 dash mb-4 w-14"></div>
+        </div>
+
+        <h2 class="text-base font-medium text-center mt-4 font-sans text-gray-600">Discover artworks according to the room & space you want to decorate</h2>
+
+        <div class="newCard flex flex-wrap gap-8 mt-16 justify-center ">
+
+            <div class="card">
+                <a href="#" class="handmadeSection">
+                    <img src="assets/Art by space/img1.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="#" class="forOfficeSection">
+                    <img src="assets/Art by space/img2.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="#" class="forGuestroomSection">
+                    <img src="assets/Art by space/img3.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="#" class="forStudioSection">
+                    <img src="assets/Art by space/img4.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Art By Style -->
+
+        <div class="name artByGrp gap-4 mt-48 flex justify-center">
+            <div class="border-b-2 dash mb-4 w-14"></div>
+            <h2 class="text-2xl font-medium text-center font-serif text-gray-800">Art by Style</h2>
+            <div class="border-b-2 dash mb-4 w-14"></div>
+        </div>
+
+        <h2 class="text-base font-medium text-center mt-4 font-sans text-gray-600">Discover artworks according to the
+            room &
+            space you want to decorate</h2>
+
+        <div class="newCard flex flex-wrap gap-8 mt-16 justify-center ">
+
+            <div class="card">
+                <a href="#" class="abstractArtworksSection">
+                    <img src="assets/Art by style/img1.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="#" class="contemporaryArtworksSection">
+                    <img src="assets/Art by style/img2.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="#" class="modernArtworksSection">
+                    <img src="assets/Art by style/img3.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="#" class="popArtworksSection">
+                    <img src="assets/Art by style/img4.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Art by Subject -->
+
+        <div class="name artByGrp gap-4 mt-48 flex justify-center">
+            <div class="border-b-2 dash mb-4 w-14"></div>
+            <h2 class="text-2xl font-medium text-center font-serif text-gray-800">Art by Subject</h2>
+            <div class="border-b-2 dash mb-4 w-14"></div>
+        </div>
+
+        <h2 class="text-base font-medium text-center mt-4 font-sans text-gray-600">Browse artworks by various subjects
+        </h2>
+
+        <div class="newCard flex flex-wrap gap-8 mt-16 justify-center ">
+
+            <div class="card">
+                <a href="#" class="handmadeSection ">
+                    <img src="assets/Art by subject/img1.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="#" class="posterSection">
+                    <img src="assets/Art by subject/img2.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="#" class="natureArtworksSection">
+                    <img src="assets/Art by subject/img3.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+
+            <div class="card">
+                <a href="#" class="krishnaArtworksSection">
+                    <img src="assets/Art by subject/img4.jpg" width="260px" alt="">
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Peaceful Artwork Banner -->
+
+        <div class="flowerBanner flex justify-center gap-8 mt-20 flex-wrap">
+
+            <a href="#" class="handmadeSection">
+                <img src="assets/Peaceful Artwork Banner.jpg" class="flowerImg w-[100%]" alt="">
+            </a>
+
+        </div>
+
+
+
+
+
+        <!-- Popular Categories -->
+
+        <div class="popular ">
+
+            <h1 class="font-serif text-gray-600 text-3xl mt-16">Popular Categories</h1>
+
+
+
+            <!-- Artwork By Subjects -->
+
+            <p class="text-justify text-gray-600 mt-6">
+                <span><b>Artworks by Subject:</b></span>
+                <a class="hover:text-teal-500" href="" title="Handmade Floral Artwork">Floral</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Rose Artwork">Rose</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Lotus Artwork">Lotus</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Sun Artwork">Sun</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Moon Artwork">Moon</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Sky Artwork">Sky</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Cloud Artwork">Cloud</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Mountain Artwork">Mountain</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade River Artwork">River</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Lake Artwork">Lake</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Landscape Artwork">Landscape</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Jungle Artwork">Jungle</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Desert Artwork">Desert</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Cityscape Artwork">Cityscape</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Seascape Artwork">Seascape</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Animal Artwork">Animal</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Horse Artwork">Horse</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Loin Artwork">Loin</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Tiger Artwork">Tiger</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Elephant Artwork">Elephant</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Monkey Artwork">Monkey</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Birds Artwork">Birds</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Peacock Artwork">Peacock</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Pigeon Artwork">Pigeon</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Sparrow Artwork">Sparrow</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Love Bird Artwork">Love Bird</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Parakeet Artwork">Parakeet</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Tree Artwork">Tree</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Leaf Artwork">Leaf</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Branch Artwork">Branch</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Car Artwork">Car</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Train Artwork">Train</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Girl Artwork">Girl</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Boy Artwork">Boy</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Building Artwork">Building</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Boat Artwork">Boat</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Ship Artwork">Ship</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Buddha Artwork">Buddha</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Krishna Artwork">Krishna</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Ganesha Artwork">Ganesha</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Rama Artwork">Rama</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Shakti Artwork">Shakti</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Radha Artwork">Radha</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Christ Artwork">Christ</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Inspirational Artwork">Inspirational</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Motivational Artwork">Motivational</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Emotional Artwork">Emotional</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Love Artwork">Love</a>
+            </p>
+
+
+            <!-- Artwork By Style -->
+
+            <p class="text-justify text-gray-600 mt-2">
+                <span><b>Artworks by Style:</b></span>
+                <a class="hover:text-teal-500" href="" title="Handmade Abstract Artwork">Abstract</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Contemporary Artwork">Contemporary</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Traditional Artwork">Traditional</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Modern Artwork">Modern</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Pattern Artwork">Pattern</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Rustic Artwork">Rustic</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Single Piece Artwork">Single Piece</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Multi Piece Artwork">Multi Piece</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Knife Artwork">Knife</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade POP Artwork">POP</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Dark Artwork">Dark</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Light Artwork">Light</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Vibrante Artwork">Vibrante</a>
+            </p>
+
+
+            <!-- Artwork by Space -->
+
+            <p class="text-justify text-gray-600 mt-2">
+                <span><b>Artworks by Space:</b></span>
+                <a class="hover:text-teal-500" href="" title="Handmade Home Artwork">Home</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Living Room Artwork">Living Room</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Guest Room Artwork">Guest Room</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Bed Room Artwork">Bed Room</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Gallery Artwork">Gallery</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Hall Artwork">Hall</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Dinning Room Artwork">Dinning Room</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Office Artwork">Office</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Meeting Room Artwork">Meeting Room</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Waiting Area Artwork">Waiting Area</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Reception Artwork">Reception</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Hotel Artwork">Hotel</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Restaurant Artwork">Restaurant</a> ·
+                <a class="hover:text-teal-500" href="" title="Handmade Hospital Artwork">Hospital</a>
+            </p>
+
+
+
+        </div>
+
+    </div>
+
+
+    <footer class="mt-10 text-gray-600">
+
+
+        <div class="flex flex-wrap justify-between">
+            <!-- Account -->
+
+            <div class="accountFooter footerSec">
+                <h1 class="text-3xl font-serif">Account</h1>
+
+                <div class="cursor-pointer hover:text-teal-500 text-base mt-3">Login / Register</div>
+                <div class="cursor-pointer hover:text-teal-500 text-base">My Account</div>
+                <div class="cursor-pointer hover:text-teal-500 text-base">My Order</div>
+                <div class="cursor-pointer hover:text-teal-500 text-base">My Wishlist</div>
+                <div class="cursor-pointer hover:text-teal-500 text-base">Artist Login</div>
+            </div>
+
+            <!-- Company -->
+
+            <div class="companyFooter footerSec">
+                <h1 class="text-3xl font-serif">Company</h1>
+
+                <div class="cursor-pointer hover:text-teal-500 text-base mt-3">About Us</div>
+                <div class="cursor-pointer hover:text-teal-500 text-base">Contact</div>
+                <div class="cursor-pointer hover:text-teal-500 text-base">Terms & Conditions</div>
+                <div class="cursor-pointer hover:text-teal-500 text-base">Privacy Policy</div>
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="contactFooter footerSec">
+                <h1 class="text-3xl font-serif">Contact</h1>
+
+                <div class="text-xl mt-3 gap-2 cursor-pointer flex">
+                    <div>
+                        <i class="fa-solid fa-phone fa-2xs"></i>
+                        <i class="fa-brands fa-whatsapp fa-2xs"></i>
+                    </div>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B919876543210&text&type=phone_number&app_absent=0"
+                    target="_blank" class="text-base hover:text-teal-500">
+                    +91 98765 43210
+                </a>
+                </div>
+                <div class="text-xl flex cursor-pointer mt-2 gap-2">
+                    <div>
+                        <i class="fa-solid fa-envelope fa-2xs"></i>
+                    </div>
+                    <div class="mailFooter text-base hover:text-teal-500">
+                        <a href="mailto:info@paintacle.com">
+                            paintdwell@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="text-xl mt-2">
+                    <button class="bg-blue-600 cursor-pointer h-10 rounded-full w-10">
+                        <i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i>
+                    </button>
+
+                    <button class="cursor-pointer bg-gradient-to-b from-red-500 via-purple-800 to-blue-900 h-10 rounded-full w-10">
+                        <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                    </button>
+
+                    <button class="cursor-pointer bg-sky-400 h-10 rounded-full w-10">
+                        <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- Rights -->
+
+    <div class="rights h-16 text-base text-center text-gray-500 bg-slate-100 flex justify-center items-center">
+        <div>
+            © 2024 Refurbish PaintDwell Pvt. Ltd. | Developed by <a
+                class="text-slate-800 hover:text-teal-500 font-medium " href="https://github.com/Divyamsharma-18">
+                Divyam Sharma
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Scroll to the top button -->
+    <!-- <div id="scrollUpBtn" class="scrollDiv flex justify-end -mt-20 mr-4 z-50">
+        <a href="#">
+            <button id="scroll-up" class="h-10 w-10 bg-teal-500 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-angles-up" style="color: #ffffff;"></i>
+            </button>
+        </a>
+    </div> -->
+
+
+
+    <!-- Hidden Checkout Page Section -->
+    <div id="checkoutPageContent" class="hidden">
+        <div class="container mx-auto pl-32 pr-32 mb-32 text-gray-700">
+            <h1 class="text-3xl mb-6 mt-12 font-serif">Checkout</h1>
+
+            <!-- Cart Items -->
+            <div id="checkout-cart-items" class="space-y-6">
+                <!-- Cart items will be rendered here -->
+            </div>
+
+            <!-- Total Price -->
+            <div class="mt-8 flex justify-between items-center border-t pt-6 bg-white p-4 rounded-lg shadow-md">
+                <h2 id="checkout-total-price" class="text-2xl">Total: ₹0</h2>
+            </div>
+
+            <!-- Shipping Details Form -->
+            <div class="mt-8 bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl mb-4 font-serif">Shipping Details</h2>
+                <form id="shipping-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                        <input type="text" id="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+                        <input type="text" id="address" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                        <input type="text" id="city" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="zip" class="block text-sm font-medium text-gray-700">ZIP Code</label>
+                        <input type="text" id="zip" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm" required>
+                    </div>
+                    <div class="mb-8">
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input type="text" id="phone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-teal-500 focus:border-teal-500 sm:text-sm" required>
+                    </div>
+
+                    <button type="submit" class="bg-teal-500 text-xl text-white px-6 py-2 rounded hover:bg-teal-600 mt-4 transition-colors duration-300 ease-in-out">
+                        Proceed to Payment
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/66ba85370cca4f8a7a7521d7/1i549gp1d';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -2906,7 +2906,7 @@ function loadProductPage(productId) {
       const product = products.find(p => p.id === productId);
       if (product) {
           document.getElementById('contentContainer').innerHTML = `
-              <div class="container mx-auto pl-32 pr-32 mb-32 text-gray-800">
+              <div class="container mx-auto pl-32 pr-32 mt-4 mb-32 text-gray-800">
                   <div class="bg-white p-6 rounded-lg shadow-md">
                       <h1 class="text-3xl mb-4 font-serif">${product.name}</h1>
                       <div class="flex">

@@ -11,8 +11,29 @@
 }
 
 
-.mainBodyCont{
-    
+
+.cartAndSearch{
+    margin-right: 32px;
+}
+
+
+
+@media (max-width: 834px), (min-width: 768px) {
+    .cartAndSearch{
+        margin-right: -10px;
+    }
+    #cartPage, #searchPage{
+        height: 36px;
+        width: 36px;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cartAndSearch{
+        margin-right: 32px;
+    }
+
 }
 
 

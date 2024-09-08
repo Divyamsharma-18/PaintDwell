@@ -24,11 +24,10 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 815px) {
     .cartAndSearch{
         margin-right: 32px;
     }
-
 }
 
 

@@ -2906,14 +2906,13 @@ function loadProductPage(productId) {
       const product = products.find(p => p.id === productId);
       if (product) {
           document.getElementById('contentContainer').innerHTML = `
-              <div class="container mx-auto pl-32 pr-32 mt-4 mb-32 text-gray-800">
-                  <div class="bg-white p-6 rounded-lg shadow-md">
-                      <h1 class="text-3xl mb-4 font-serif">${product.name}</h1>
-                      <div class="flex">
-                          <img src="${product.image}" alt="${product.name}" class="w-48 h-48 object-cover rounded-md mr-8">
+              <div class="container flex justify-center items-center mx-auto pl-32 mt-4 pr-32 mb-32 text-gray-800">
+                  <div class="bg-white w-[300px] h-[320px] rounded-lg shadow-md flex flex-col">
+                      <h1 class="text-3xl mb-4 font-serif text-center">${product.name}</h1>
+                      <div class="flex flex-col justify-center gap-2  text-teal-500  text-xl font-semibold items-center">
+                          <img src="${product.image}" alt="${product.name}" class="w-48 h-48 object-cover rounded-md">
                           <div data-product-id="${product.id}>
-                              <p class="text-2xl font-semibold text-teal-600 mb-4">₹${product.price}</p>
-                              <p class="mb-4 text-xl">${product.name}</p>
+                              <p class="mb-4 text-center">₹${product.price}</p>
                           </div>
                       </div>
                   </div>

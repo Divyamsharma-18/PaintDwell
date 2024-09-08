@@ -2852,7 +2852,7 @@ document.getElementById('searchPage').addEventListener('click', function () {
           </div>
           
           <!-- Search Results -->
-          <div id="search-results" class="space-y-6">
+          <div id="search-results" class="space-y-6 flex flex-wrap justify-center items-center">
               <!-- Search results will be dynamically inserted here -->
           </div>
       </div>

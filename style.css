@@ -24,7 +24,7 @@
     }
 }
 
-@media (min-width: 815px) {
+@media (max-width: 767px) {
     .cartAndSearch{
         margin-right: 32px;
     }

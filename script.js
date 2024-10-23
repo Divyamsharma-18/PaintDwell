@@ -2719,7 +2719,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Order Data:', orderData); // Log orderData
 
         try {
-          const response = await fetch('http://localhost:3000/api/orders', { 
+          const response = await fetch('https://paintdwell-backend.onrender.com/api/orders', { 
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

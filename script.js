@@ -1,4 +1,4 @@
-   // Show the popup immediately after script runs
+ // Show the popup immediately after script runs
 setTimeout(() => {
   document.getElementById('notification-popup').classList.remove('hidden');
 }, 1000); // Show popup after 1 second
@@ -2448,9 +2448,12 @@ document.querySelectorAll('.replaceContentButton').forEach(function (element) {
         // Check if the user is logged in
         if (isLoggedIn) {
             contentContainer.innerHTML = `
-                <div class="loggedInMessage text-center mt-16 mb-16">
-                    <h1 class="text-3xl font-serif">You're already logged in!</h1>
-                    <p class="text-xl mt-4">We're happy to have you as our customer!</p>
+                <div class="loggedInMessage font-serif text-center mt-16 mb-16">
+                    <h1 class="text-3xl">You're already logged in!</h1>
+                    <p class="text-xl mt-6">We're happy to have you as our customer!</p>
+                    <p class="text-xl mt-8 mb-8 pl-12 pr-12 ">We’re absolutely thrilled to have you on board! Your prensence brings joy to our community, and we’re excited to continue this journey with you.</p>
+                    <p class="text-xl mt-4 pl-12 pr-12">At PaintDwell, we believe every day is a new opportunity for healing and comfort. Your commitment to your well-being inspires us, and we’re here to support you every step of the way.</p>
+                    <p class="text-xl mt-8 pl-12 pr-12">Thank you for being a part of our family. Let’s make today a beautiful day together!</p>
                 </div>
             `;
         } else {
@@ -2510,10 +2513,13 @@ document.querySelectorAll('.replaceContentButton').forEach(function (element) {
                     isLoggedIn = true; // Set the login state to true
                     // Change content upon successful verification
                     contentContainer.innerHTML = `
-                        <div class="loggedInMessage text-center mt-16 mb-16">
-                            <h1 class="text-3xl font-serif">You're already logged in!</h1>
-                            <p class="text-xl mt-4">We're happy to have you as our customer!</p>
-                        </div>
+                        <div class="loggedInMessage font-serif text-center mt-16 mb-16">
+                    <h1 class="text-3xl">You're already logged in!</h1>
+                    <p class="text-xl mt-6">We're happy to have you as our customer!</p>
+                    <p class="text-xl mt-8 mb-8 pl-12 pr-12 ">We’re absolutely thrilled to have you on board! Your prensence brings joy to our community, and we’re excited to continue this journey with you.</p>
+                    <p class="text-xl mt-4 pl-12 pr-12">At PaintDwell, we believe every day is a new opportunity for healing and comfort. Your commitment to your well-being inspires us, and we’re here to support you every step of the way.</p>
+                    <p class="text-xl mt-8 pl-12 pr-12">Thank you for being a part of our family. Let’s make today a beautiful day together!</p>
+                </div>
                     `;
                 } else {
                     alert("Incorrect verification code, please try again.");
@@ -2537,9 +2543,12 @@ document.addEventListener('DOMContentLoaded', function () {
         // Check if the user is logged in
         if (isLoggedIn) {
             contentContainer.innerHTML = `
-                <div class="loggedInMessage text-center mt-16 mb-16">
-                    <h1 class="text-3xl font-serif">You're already logged in!</h1>
-                    <p class="text-xl mt-4">We're happy to have you as our customer!</p>
+                <div class="loggedInMessage font-serif text-center mt-16 mb-16">
+                    <h1 class="text-3xl">You're already logged in!</h1>
+                    <p class="text-xl mt-6">We're happy to have you as our customer!</p>
+                    <p class="text-xl mt-8 mb-8 pl-12 pr-12 ">We’re absolutely thrilled to have you on board! Your prensence brings joy to our community, and we’re excited to continue this journey with you.</p>
+                    <p class="text-xl mt-4 pl-12 pr-12">At PaintDwell, we believe every day is a new opportunity for healing and comfort. Your commitment to your well-being inspires us, and we’re here to support you every step of the way.</p>
+                    <p class="text-xl mt-8 pl-12 pr-12">Thank you for being a part of our family. Let’s make today a beautiful day together!</p>
                 </div>
             `;
         } else {

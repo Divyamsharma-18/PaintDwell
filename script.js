@@ -1,4 +1,4 @@
-// Show the popup immediately after script runs
+   // Show the popup immediately after script runs
 setTimeout(() => {
   document.getElementById('notification-popup').classList.remove('hidden');
 }, 1000); // Show popup after 1 second
@@ -2438,45 +2438,131 @@ function renderWishlistItems() {
 
 
 
+// Login Page
+let isLoggedIn = false; // Track login state
+
+document.querySelectorAll('.replaceContentButton').forEach(function (element) {
+    element.addEventListener('click', function () {
+        const contentContainer = document.getElementById('contentContainer');
+
+        // Check if the user is logged in
+        if (isLoggedIn) {
+            contentContainer.innerHTML = `
+                <div class="loggedInMessage text-center mt-16 mb-16">
+                    <h1 class="text-3xl font-serif">You're already logged in!</h1>
+                    <p class="text-xl mt-4">We're happy to have you as our customer!</p>
+                </div>
+            `;
+        } else {
+            contentContainer.innerHTML = `
+                <h1 class="text-center text-3xl font-serif mt-8 mb-8">Hello Art Lover! <br> Register for newsletters here!</h1>
+                <div class="loginBox mt-16 mb-16 flex flex-wrap gap-20 justify-center">
+                    <div class="loginSec border-2 border-slate-200 flex justify-center flex-col w-96 h-80 items-center">
+                        <h1 class="loginHead text-3xl border-b-2 border-slate-200 font-serif w-[80%]">Login</h1>
+                        <form class="flex flex-col mt-8 items-end" id="emailForm">
+                            <input id="emailAddress" class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="email" placeholder="Enter your email" required />
+                            <button type="button" id="sendEmailButton" class="font-semibold mt-6 h-9 w-24 bg-teal-500 hover:bg-teal-700 text-white">Send Code</button>
+                            <input id="verificationCode" class="border-2 pl-2 pt-1 pb-1 text-sm mt-3 w-80 text-justify" type="text" placeholder="Enter Verification Code" style="display:none;" required />
+                            <button id="verifyCodeButton" type="button" class="font-semibold mt-6 h-9 w-[96px] bg-teal-500 hover:bg-teal-700 text-white" style="display:none;">Verify Code</button>
+                        </form>
+                    </div>
+                </div>
+            `;
+
+            // Initialize EmailJS with your public key
+            emailjs.init("ODauCj8ar8AJ31SQF");
+
+            const sendEmailButton = document.getElementById('sendEmailButton');
+            const emailAddress = document.getElementById('emailAddress');
+            const verificationCodeInput = document.getElementById('verificationCode');
+            const verifyCodeButton = document.getElementById('verifyCodeButton');
+
+            let verificationCode;
+
+            sendEmailButton.addEventListener('click', function () {
+                if (!emailAddress.value) {
+                    alert("Please enter a valid email address");
+                    return;
+                }
+
+                // Generate a random verification code
+                verificationCode = Math.floor(100000 + Math.random() * 900000);  // 6-digit random number
+
+                // Use EmailJS to send the email
+                emailjs.send("service_ejwfqqt", "template_y7qotkn", {
+                    to_email: emailAddress.value,
+                    code: verificationCode
+                })
+                .then(function(response) {
+                    alert("Verification code sent!");
+                    verificationCodeInput.style.display = "block";
+                    verifyCodeButton.style.display = "block";
+                }, function(error) {
+                    console.error("Failed to send email", error);
+                    alert("Error sending verification email");
+                });
+            });
+
+            verifyCodeButton.addEventListener('click', function () {
+                const enteredCode = verificationCodeInput.value;
+                if (enteredCode == verificationCode) {
+                    alert("Verification successful!");
+                    isLoggedIn = true; // Set the login state to true
+                    // Change content upon successful verification
+                    contentContainer.innerHTML = `
+                        <div class="loggedInMessage text-center mt-16 mb-16">
+                            <h1 class="text-3xl font-serif">You're already logged in!</h1>
+                            <p class="text-xl mt-4">We're happy to have you as our customer!</p>
+                        </div>
+                    `;
+                } else {
+                    alert("Incorrect verification code, please try again.");
+                }
+            });
+        }
+    });
+});
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   // Function to bind event listeners to .replaceContentButton
   function bindReplaceContentButton() {
     document.querySelectorAll('.replaceContentButton').forEach(function (element) {
       element.addEventListener('click', function () {
-        console.log('Replace content button clicked'); // Debugging
-        document.getElementById('contentContainer').innerHTML = `
-                  <h1 class="text-center text-3xl font-serif mt-8 mb-8">Hello Art Lover! <br> Register for newsletters here!</h1>
-                  <div class="loginBox mt-16 mb-16 flex flex-wrap gap-20 justify-center">
-                      <div class="loginSec border-2 border-slate-200 flex justify-center flex-col w-96 h-80 items-center">
-                          <h1 class="loginHead text-3xl border-b-2 border-slate-200 font-serif w-[80%]">Login</h1>
-                          <form class="flex flex-col mt-8 items-end">
-                              <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="email" placeholder="Email address" name="email" required />
-                              <input class="border-2 pl-2 pt-1 pb-1 text-sm mt-3 w-80 text-justify" type="password" placeholder="Password" name="password" required />
-                              <button class="font-semibold mt-6 h-8 w-20 bg-teal-500 hover:bg-teal-700 text-white">Login</button>
-                          </form>
-                          <a class="mr-48 hover:text-teal-500" href="#">Forgot Password</a>
-                      </div>
-                      <div class="loginSec border-2 pb-8 border-slate-200 flex justify-center flex-col items-center w-96">
-                          <h1 class="loginHead text-3xl mt-8 border-b-2 border-slate-200 font-serif w-[80%]">Register</h1>
-                          <form class="flex flex-col mt-8 items-center">
-                              <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="text" placeholder="Name" name="name" required />
-                              <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="email" placeholder="Email address" name="email" required />
-                              <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="number" placeholder="Phone Number" name="phone" required />
-                              <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="password" placeholder="Password" id="Password" name="password" required />
-                              <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="password" placeholder="Confirm Password" id="confirmPassword" name="password" required />
-                              <p class="mt-4 pl-8 pr-8">By clicking Register, you agree to our Terms & Conditions & Privacy Policy and confirm that you have read both policies.</p>
-                              <button class="font-bold mt-4 h-10 w-32 bg-teal-500 hover:bg-teal-700 text-white ml-48">Register</button>
-                          </form>
-                      </div>
-                  </div>
-              `;
-      });
+        const contentContainer = document.getElementById('contentContainer');
+
+        // Check if the user is logged in
+        if (isLoggedIn) {
+            contentContainer.innerHTML = `
+                <div class="loggedInMessage text-center mt-16 mb-16">
+                    <h1 class="text-3xl font-serif">You're already logged in!</h1>
+                    <p class="text-xl mt-4">We're happy to have you as our customer!</p>
+                </div>
+            `;
+        } else {
+            contentContainer.innerHTML = `
+                <h1 class="text-center text-3xl font-serif mt-8 mb-8">Hello Art Lover! <br> Register for newsletters here!</h1>
+                <div class="loginBox mt-16 mb-16 flex flex-wrap gap-20 justify-center">
+                    <div class="loginSec border-2 border-slate-200 flex justify-center flex-col w-96 h-80 items-center">
+                        <h1 class="loginHead text-3xl border-b-2 border-slate-200 font-serif w-[80%]">Login</h1>
+                        <form class="flex flex-col mt-8 items-end" id="emailForm">
+                            <input id="emailAddress" class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="email" placeholder="Enter your email" required />
+                            <button type="button" id="sendEmailButton" class="font-semibold mt-6 h-9 w-24 bg-teal-500 hover:bg-teal-700 text-white">Send Code</button>
+                            <input id="verificationCode" class="border-2 pl-2 pt-1 pb-1 text-sm mt-3 w-80 text-justify" type="text" placeholder="Enter Verification Code" style="display:none;" required />
+                            <button id="verifyCodeButton" type="button" class="font-semibold mt-6 h-9 w-[96px] bg-teal-500 hover:bg-teal-700 text-white" style="display:none;">Verify Code</button>
+                        </form>
+                    </div>
+                </div>
+            `;
+      }});
     });
   }
 
   // Bind event listeners to .wishlistPage elements
-  document.querySelectorAll('.wishlistPage').forEach(function (element) {
+document.querySelectorAll('.wishlistPage').forEach(function (element) {
     element.addEventListener('click', function () {
       console.log('Wishlist button clicked'); // Debugging
 
@@ -2518,6 +2604,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+
 
 
 
@@ -2836,41 +2924,7 @@ function addToCart(product) {
 
 
 
-document.querySelectorAll('.replaceContentButton').forEach(function (element) {
-  element.addEventListener('click', function () {
-    document.getElementById('contentContainer').innerHTML = `
 
-	
-	
-	<h1 class="text-center text-3xl font-serif mt-8 mb-8">Hello Art Lover! <br> Register for newsletters here!</h1>
-                <div class="loginBox mt-16 mb-16 flex flex-wrap gap-20 justify-center">
-                    <div class="loginSec border-2 border-slate-200 flex justify-center flex-col w-96 h-80 items-center">
-                        <h1 class="loginHead text-3xl border-b-2 border-slate-200 font-serif w-[80%]">Login</h1>
-                        <form class="flex flex-col mt-8 items-end">
-                            <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="email" placeholder="Email address" name="email" required />
-                            <input class="border-2 pl-2 pt-1 pb-1 text-sm mt-3 w-80 text-justify" type="password" placeholder="Password" name="password" required />
-                            <button class="font-semibold mt-6 h-8 w-20 bg-teal-500 hover:bg-teal-700 text-white">Login</button>
-                        </form>
-                        <a class="mr-48 hover:text-teal-500" href="#">Forgot Password</a>
-                    </div>
-                    <div class="loginSec border-2 pb-8 border-slate-200 flex justify-center flex-col items-center w-96">
-                        <h1 class="loginHead text-3xl mt-8 border-b-2 border-slate-200 font-serif w-[80%]">Register</h1>
-                        <form class="flex flex-col mt-8 items-center">
-                            <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="text" placeholder="Name" name="name" required />
-                            <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="email" placeholder="Email address" name="email" required />
-                            <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="number" placeholder="Phone Number" name="phone" required />
-                            <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="password" placeholder="Password" id="Password" name="password" required />
-                            <input class="border-2 text-sm pl-2 pt-1 pb-1 w-80 text-left mt-3" type="password" placeholder="Confirm Password" id="confirmPassword" name="password" required />
-                            <p class="mt-4 pl-8 pr-8">By clicking Register, you agree to our Terms & Conditions & Privacy Policy and confirm that you have read both policies.</p>
-                            <button class="font-bold mt-4 h-10 w-32 bg-teal-500 hover:bg-teal-700 text-white ml-48">Register</button>
-                        </form>
-                    </div>
-                </div>                    
-
-
-        `;
-  });
-});
 
 
 
@@ -3068,7 +3122,6 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById('orderPlaced').addEventListener('click', function () {
   alert('Button clicked!');
 });
-
 
 
 
